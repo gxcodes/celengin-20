@@ -60,8 +60,8 @@ module SimpleCalendar
                 td_class << (cur_events.any? ? "events" : "no-events")
 
                 content_tag(:td, :class => td_class.join(" "), :'data-date-iso'=>date.to_s, 'data-date'=>date.to_s.gsub('-', '/')) do
-                  content_tag(:a, href: '#') do
-                  content_tag(:div, class: "huzzaah") do
+                  content_tag(:div, class: "td_min_height") do
+                    content_tag(:a, href: '#') do
                     divs = []
                     concat content_tag(:div, date.day.to_s, :class=>"day_number")
 
@@ -72,8 +72,8 @@ module SimpleCalendar
                     end
 
                     divs.join.html_safe
+                    end #content_tag :a
                   end #content_tag :div
-                end
                 end #content_tag :td
 
               end.join.html_safe
