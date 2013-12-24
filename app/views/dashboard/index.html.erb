@@ -1,0 +1,7 @@
+<h1>Dashboard#index</h1>
+
+<%= calendar @events, :start_day => :monday do |event| %> 
+  <div>
+    <%= link_to event.name, '#' %>
+  </div>
+<% end %>

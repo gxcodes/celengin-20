@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "CELENG.IN" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to "CELENG.IN", root_path  %></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <% if user_signed_in? %>
+      <ul class="right">
+        <li><%= link_to "Dashboard", dashboard_index_path  %></li>
+        <li class="has-dropdown">
+          <a href="#"><%= "#{current_user.username} (#{current_user.email})" %></a>
+          <ul class="dropdown">
+            <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+            <li><%= link_to "Logout", destroy_user_session_path, method: :delete  %></li>
+          </ul>
+        </li>
+      </ul>
+      <% else %>
+      <ul class="right">
+        <li><%= link_to "Sign up", new_user_registration_path  %></li>
+        <li><%= link_to "Login", new_user_session_path  %></li>
+      </ul>
+      <% end %>
+
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li><a href="#">How To Use</a></li>
+      </ul>
+    </section>
+  </nav>
+
+  <div class="row">
+    <div class="large-12">
+
+    <% if notice %>
+      <br /><div data-alert class="alert-box success">
+        <%= notice %><a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
+    <% if alert %>
+      <br /><div data-alert class="alert-box alert">
+        <%= alert %><a href="#" class="close">&times;</a>
+      </div>
+    <% end %>
+
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+
+    </div>
+  </div>
+  </body>
+</html>
