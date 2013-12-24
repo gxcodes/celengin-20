@@ -1,3 +1,8 @@
+Report Kerjaan Model
+
+Untuk Foto Model Belum gw pasang nunggu carierwave
+=========
+
 CELENG.IN
 
 Calendar based, simple income-outcome log Target savings and recommendation Reminder to save, can be customized Monetization: ads & item recommendation
@@ -21,12 +26,28 @@ Menyiapkan model yang akan di oper ke model
 
 Model
 
-==> User email password photo alamat tabungan total_tabungan
+==> User 
+    email 
+    password 
+    photo ==> pake carier wave
+    alamat 
+    tabungan 
+    total_tabungan
 
-==> History User_id income outcome Description Date TargetSaving_id
+==> History 
+    User_id 
+    income 
+    outcome 
+    Description 
+    Date 
+    TargetSaving_id
 
-==> TargetSaving Item Description Url amount_target price deadline --tampil harian / "mingguan" / bulanan
-
+==> TargetSaving 
+    Item 
+    Description 
+    Url 
+    amount_target 
+    price deadline --tampil harian / "mingguan" / bulanan
 ???===Kemungkinan Gak Usah ==> HistoryTarget User_id TargetSaving_id amount Date ???===Kemungkinan Gak Usah
 Target maksimal
 
