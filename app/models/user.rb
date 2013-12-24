@@ -18,4 +18,7 @@ class User < ActiveRecord::Base
     end
   end
 
+  has_many :target_savings
+  has_many :events
+
 end

@@ -11,13 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131224030149) do
+ActiveRecord::Schema.define(version: 20131224072655) do
 
   create_table "events", force: true do |t|
     t.string   "name"
     t.datetime "start_time"
+    t.integer  "user_id"
+    t.integer  "income"
+    t.integer  "outcome"
+    t.string   "description"
+    t.integer  "target_saving_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "target_savings", force: true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "url"
+    t.integer  "amount_target"
+    t.integer  "price"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "deadline"
   end
 
   create_table "users", force: true do |t|
@@ -31,6 +47,9 @@ ActiveRecord::Schema.define(version: 20131224030149) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
+    t.string   "address"
+    t.string   "savings"
+    t.string   "total_savings"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"
