@@ -15,4 +15,4 @@ gem 'foundation-rails'
 gem 'devise'
 gem 'simple_calendar', :path => 'vendor/gems/simple_calendar-0.1.9'
 
-# gem 'foolib', :path => File.join(File.dirname(__FILE__), '/vendor/gems/foolib-1.2.3')
+gem 'debugger', group: [:development, :test]
