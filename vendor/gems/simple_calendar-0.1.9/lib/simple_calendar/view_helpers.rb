@@ -11,7 +11,7 @@ module SimpleCalendar
           :prev_text  => raw("&laquo;"),
           :next_text  => raw("&raquo;"),
           :start_day  => :sunday,
-          :class      => "table table-bordered table-striped calendar",
+          :class      => "calendar",
           :params     => {}
       }
       options.reverse_merge! opts
