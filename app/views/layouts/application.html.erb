@@ -27,7 +27,7 @@
       <ul class="right">
         <li><%= link_to "Dashboard", dashboard_index_path  %></li>
         <li class="has-dropdown">
-          <a href="#"><%= "#{current_user.username} (#{current_user.email})" %></a>
+          <%= link_to "#{current_user.username} (#{current_user.email})", edit_user_registration_path %>
           <ul class="dropdown">
             <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
             <li><%= link_to "Logout", destroy_user_session_path, method: :delete  %></li>
@@ -46,26 +46,25 @@
         <li><a href="#">How To Use</a></li>
       </ul>
     </section>
-  </nav>
+  </nav><br />
 
   <div class="row">
-    <div class="large-12">
-
-    <% if notice %>
-      <br /><div data-alert class="alert-box success">
-        <%= notice %><a href="#" class="close">&times;</a>
-      </div>
-    <% end %>
-    <% if alert %>
-      <br /><div data-alert class="alert-box alert">
-        <%= alert %><a href="#" class="close">&times;</a>
-      </div>
-    <% end %>
+    <div class="large-12 column">
+      <% if notice %>
+        <div data-alert class="alert-box success">
+          <%= notice %><a href="#" class="close">&times;</a>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div data-alert class="alert-box alert">
+          <%= alert %><a href="#" class="close">&times;</a>
+        </div>
+      <% end %>
+    </div>
+  </div>
 
     <%= yield %>
     <%= javascript_include_tag "application" %>
 
-    </div>
-  </div>
   </body>
 </html>

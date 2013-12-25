@@ -17,3 +17,7 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+// $(document.body).on('click', '.date_cell', function(){
+//   alert("Clicked!");
+// });

@@ -2,5 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.calendar td { width: 120px; }
-.td_min_height { min-height: 80px; }
+.td_min_height { min-height: 70px; }
+.calendar td { width: 100px; }
+.calendar td:hover { background-color: bisque; }
+.calendar td.today, .calendar td.today:hover { background-color: coral; }

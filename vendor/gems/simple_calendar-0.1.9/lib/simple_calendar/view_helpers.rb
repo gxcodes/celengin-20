@@ -60,8 +60,7 @@ module SimpleCalendar
                 td_class << (cur_events.any? ? "events" : "no-events")
 
                 content_tag(:td, :class => td_class.join(" "), :'data-date-iso'=>date.to_s, 'data-date'=>date.to_s.gsub('-', '/')) do
-                  content_tag(:div, class: "td_min_height") do
-                    content_tag(:a, href: '#') do
+                  content_tag(:div, :class=>"td_min_height date_cell", :'data-reveal-id'=>"myModal") do
                     divs = []
                     concat content_tag(:div, date.day.to_s, :class=>"day_number")
 
@@ -72,7 +71,6 @@ module SimpleCalendar
                     end
 
                     divs.join.html_safe
-                    end #content_tag :a
                   end #content_tag :div
                 end #content_tag :td
 
@@ -93,13 +91,13 @@ module SimpleCalendar
 
     # Generates the header that includes the month and next and previous months
     def month_header(selected_month, options)
-      content_tag :h2 do
+      content_tag :h4 do
         previous_month = selected_month.advance :months => -1
         next_month = selected_month.advance :months => 1
         tags = []
 
         tags << month_link(options[:prev_text], previous_month, options[:params], {:class => "previous-month"})
-        tags << "#{I18n.t("date.month_names")[selected_month.month]} #{selected_month.year}"
+        tags << " #{I18n.t("date.month_names")[selected_month.month]} #{selected_month.year} "
         tags << month_link(options[:next_text], next_month, options[:params], {:class => "next-month"})
 
         tags.join.html_safe
