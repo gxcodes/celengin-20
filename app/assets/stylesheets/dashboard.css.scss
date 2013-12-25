@@ -6,3 +6,4 @@
 .calendar td { width: 100px; }
 .calendar td:hover { background-color: bisque; }
 .calendar td.today, .calendar td.today:hover { background-color: coral; }
+.calendar td.not-current-month div.day_number { color: #bbb }
