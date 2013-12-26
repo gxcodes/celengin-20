@@ -1,0 +1,23 @@
+<form>
+  <label>Transaction: </label>
+
+  <%= radio_button_tag 'transaksi', 'add_income' %><%= label_tag 'transaksi_add_income', 'Add Income' %>
+  <%= radio_button_tag 'transaksi', 'add_outcome' %><%= label_tag 'transaksi_add_outcome', 'Add Outcome' %>
+  <%= radio_button_tag 'transaksi', 'add_saving' %><%= label_tag 'transaksi_add_saving', 'Add Saving' %>
+
+  <br />
+  <div id="select">
+    <%= select_tag "savings", "<option>This Saving</option><option>That Saving</option><option>My Saving</option>".html_safe %>
+  </div>
+
+  <div class="row collapse">
+    <div class="small-3 large-2 columns">
+      <span class="prefix">Rp </span>
+    </div>
+    <div class="small-9 large-10 columns">
+      <%= number_field_tag 'amount', nil, placeholder: 'Enter amount...' %>
+    </div>
+  </div>
+
+  <%= submit_tag "Submit", data: { disable_with: "Mohon tunggu..." }, class: "button small" %>
+</form>
