@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20131224072655) do
     t.string   "name"
     t.datetime "start_time"
     t.integer  "user_id"
-    t.integer  "income"
-    t.integer  "outcome"
+    t.integer  "income",           default: 0
+    t.integer  "outcome",          default: 0
     t.string   "description"
     t.integer  "target_saving_id"
     t.datetime "created_at"
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(version: 20131224072655) do
     t.string   "name"
     t.text     "description"
     t.string   "url"
-    t.integer  "amount_target"
-    t.integer  "price"
+    t.integer  "amount_target", default: 0
+    t.integer  "price",         default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.date     "deadline"
@@ -48,8 +48,8 @@ ActiveRecord::Schema.define(version: 20131224072655) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "address"
-    t.string   "savings"
-    t.string   "total_savings"
+    t.integer  "savings",                default: 0
+    t.integer  "total_savings",          default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"

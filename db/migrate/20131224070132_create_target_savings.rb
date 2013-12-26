@@ -4,8 +4,8 @@ class CreateTargetSavings < ActiveRecord::Migration
       t.string    :name
       t.text      :description
       t.string    :url
-      t.integer   :amount_target
-      t.integer   :price
+      t.integer   :amount_target, :default => 0
+      t.integer   :price, :default => 0
       t.timestamps
     end
   end
