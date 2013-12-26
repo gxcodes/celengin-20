@@ -1,4 +1,5 @@
-<form>
+<!-- <form> -->
+<%= form_for(@event) do |f| %>
   <fieldset>
     <legend>Transaction: </legend>
 
@@ -7,10 +8,12 @@
     <%= radio_button_tag 'transaksi', 'add_saving' %><%= label_tag 'transaksi_add_saving', 'Add Saving' %>
 
     <br />
+    <!-- 
+      <%#= select_tag "savings", "<option>This Saving</option><option>That Saving</option><option>My Saving</option>".html_safe %>
+     -->
     <div id="select_saving" class="show">
-      <%= select_tag "savings", "<option>This Saving</option><option>That Saving</option><option>My Saving</option>".html_safe %>
+      <%= collection_select(:target, :target_savings, TargetSaving.all, :id, :name) %>
     </div>
-
     <div class="row collapse">
       <div class="small-3 large-2 columns">
         <span class="prefix">Rp </span>
@@ -22,4 +25,5 @@
   </fieldset>
 
   <%= submit_tag "Submit", data: { disable_with: "Mohon tunggu..." }, class: "button small" %>
-</form>
+  <% end %> 
+<!-- </form> -->
