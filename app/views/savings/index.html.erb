@@ -14,15 +14,13 @@
   </div>
 
   <div class="large-9 medium-8 columns">
-    <%= calendar @events, :start_day => :monday do |event| %> 
-      <%= link_to event.name, '#' %>
-    <% end %>
+  <h2>This is the page where target savings reside.</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat.</p>
+  <p> Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
-</div>
-
-<div id="myModal" class="reveal-modal small" data-reveal>
-  <h2>What do you want to add?</h2>
-    <p class="lead">Pick one of the transaction and enter the amount:</p>
-    <%= render 'dashboard/transaction_form' %>
-  <a class="close-reveal-modal">&#215;</a>
 </div>
