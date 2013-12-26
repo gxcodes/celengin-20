@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row full">
   <div class="large-3 medium-4 columns">
     <div class="sidebar panel">
       <h5>In a Glance</h5>
@@ -21,14 +21,8 @@
 </div>
 
 <div id="myModal" class="reveal-modal small" data-reveal>
-  <h2>Mo ngapain sekarang?</h2>
-    <p class="lead">Ini yang bisa lo kerjain:</p>
-    <ol>
-      <li>Catet Income</li>
-      <li>Catet Outcome</li>
-      <li>Nabung</li>
-    </ol>
-
-    <%= render 'dashboard/formulirku' %>
+  <h2>What do you want to add?</h2>
+    <p class="lead">Pick one of the transaction and enter the amount:</p>
+    <%= render 'dashboard/transaction_form' %>
   <a class="close-reveal-modal">&#215;</a>
 </div>
