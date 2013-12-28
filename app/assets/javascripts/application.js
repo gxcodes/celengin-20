@@ -17,3 +17,9 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+$( document ).ready( function(){
+  $( "td" ).click( function() {
+    var date = $( this ).attr( "data-date-iso" );
+    $('input#date').val(date);
+  });
+});
