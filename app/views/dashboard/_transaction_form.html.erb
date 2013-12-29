@@ -1,7 +1,20 @@
 <!-- <form> -->
 <%= form_for(@event) do |f| %>
+  <div class="row">
+    <div class="small-8 small-offset-4">
+      <div class="row">
+        <div class="small-2 columns">
+          <label for="date" class="right inline">Date: </label>
+        </div>
+        <div class="small-10 columns">
+          <%= date_field_tag 'date' %>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <fieldset>
-    <legend>Transaction: </legend>
+    <legend>Transaction : </legend>
 
     <%= radio_button_tag 'transaksi', 'add_income' %><%= label_tag 'transaksi_add_income', 'Add Income' %>
     <%= radio_button_tag 'transaksi', 'add_outcome' %><%= label_tag 'transaksi_add_outcome', 'Add Outcome' %>
@@ -20,9 +33,6 @@
       </div>
       <div class="small-9 large-10 columns">
         <%= number_field_tag 'amount', nil, placeholder: 'Enter amount...' %>
-      </div>
-      <div class="small-9 large-10 columns">
-        <%= date_field_tag 'date', nil, placeholder: 'Enter amount...' %>
       </div>
     </div>
   </fieldset>
