@@ -14,13 +14,21 @@
 //= require jquery_ujs
 //= require foundation
 //= require turbolinks
+
+//= require fullcalendar
+
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
 
-$( document ).ready( function(){
-  $( "td" ).click( function() {
-    var date = $( this ).attr( "data-date-iso" );
-    $('input#date').val(date);
-  });
+$(document).ready(function() {
+    $('#calendar').fullCalendar({
+      editable: true,
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      defaultView: 'month'
+    });
 });

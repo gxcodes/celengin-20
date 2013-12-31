@@ -2,9 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.td_min_height { min-height: 70px; }
-.calendar { width: 100%; }
-.calendar td:hover { background-color: bisque; }
-.calendar td.today, .calendar td.today:hover { background-color: coral; }
-.calendar td.not-current-month { pointer-events: none; }
-.calendar td.not-current-month div.day_number { color: #bbb; pointer-events: none; }
+// .td_min_height { min-height: 70px; }
+// .calendar { width: 100%; }
+// .calendar td:hover { background-color: bisque; }
+// .calendar td.today, .calendar td.today:hover { background-color: coral; }
+// .calendar td.not-current-month { pointer-events: none; }
+// .calendar td.not-current-month div.day_number { color: #bbb; pointer-events: none; }

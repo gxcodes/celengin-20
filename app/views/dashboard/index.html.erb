@@ -14,9 +14,10 @@
   </div>
 
   <div class="large-9 medium-8 columns">
-    <%= calendar @events, :start_day => :monday do |event| %> 
-      <%= link_to event.name, '#' %>
-    <% end %>
+    <div id='calendar'></div>
+     <%#= calendar @events, :start_day => :monday do |event| %> 
+      <%#= link_to event.name, '#' %>
+    <%# end %>
   </div>
 </div>
 
